@@ -1,8 +1,15 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { useContext } from "react";
+import { ThemeContext } from "./ThemeContext";
+
 export default function Navigation() {
+  const { theme, toggle, dark } = useContext(ThemeContext);
   return (
-    <>
-      <nav>
+    <div>
+      <nav
+        style={{ backgroundColor: theme.backgroundColor, color: theme.color }}
+      >
         <ul>
           <li>
             <a href="#home" className="active">
@@ -19,7 +26,22 @@ export default function Navigation() {
             <a href="#contact">Contact</a>
           </li>
         </ul>
+        <div style={{ position: "relative" }}>
+          <a
+            className="switch-mode"
+            href="#"
+            onClick={toggle}
+            style={{
+              backgroundColor: theme.backgroundColor,
+              color: theme.color,
+              outline: "none",
+            }}
+            data-testid="toggle-theme-btn"
+          >
+            Switch Nav to {!dark ? "Dark" : "Light"} mode
+          </a>
+        </div>
       </nav>
-    </>
+    </div>
   );
 }
