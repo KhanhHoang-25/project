@@ -15,6 +15,7 @@ const initialState = {
   theme: themes.light,
   toggle: () => {},
 };
+
 const ThemeContext = React.createContext(initialState);
 
 function ThemeProvider({ children }) {

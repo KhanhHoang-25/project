@@ -10,7 +10,6 @@
 
 ul {
   height: 26px;
-  background-color: rgb(38, 35, 35);
   display: flex;
   list-style-type: none;
   justify-content: flex-start;
@@ -26,7 +25,7 @@ li:hover {
 }
 
 li a {
-  color: white;
+  color: #333;
   text-decoration: none;
   margin: 0;
 }
@@ -120,4 +119,11 @@ img {
 .popup .content {
   max-height: 30%;
   overflow: auto;
+}
+
+.nav nav {
+  display: flex;
+  height: 50px;
+  justify-content: space-around;
+  align-items: center;
 }

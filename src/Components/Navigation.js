@@ -2,28 +2,58 @@
 import React from "react";
 import { useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
-
 export default function Navigation() {
   const { theme, toggle, dark } = useContext(ThemeContext);
   return (
-    <div>
+    <div className="nav">
       <nav
         style={{ backgroundColor: theme.backgroundColor, color: theme.color }}
       >
         <ul>
           <li>
-            <a href="#home" className="active">
+            <a
+              className="active"
+              href="#home"
+              style={{
+                backgroundColor: theme.backgroundColor,
+                color: theme.color,
+              }}
+            >
               Home
             </a>
           </li>
           <li>
-            <a href="#news">News</a>
+            <a
+              href="#news"
+              style={{
+                backgroundColor: theme.backgroundColor,
+                color: theme.color,
+              }}
+            >
+              News
+            </a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a
+              href="#about"
+              style={{
+                backgroundColor: theme.backgroundColor,
+                color: theme.color,
+              }}
+            >
+              About
+            </a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a
+              href="#contact"
+              style={{
+                backgroundColor: theme.backgroundColor,
+                color: theme.color,
+              }}
+            >
+              Contact
+            </a>
           </li>
         </ul>
         <div style={{ position: "relative" }}>
